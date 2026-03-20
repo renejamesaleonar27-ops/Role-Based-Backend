@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ===========================================
+   PAGE VISIBILITY CONTROL
+   
+.page = hidden by default
+.page.active = visible (shows the page)=========================================== */
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+
+/* ===========================================
+   NAVIGATION VISIBILITY CONTROL
+   
+Show different nav based on login state=========================================== */
+
+/* When NOT logged in: show login nav, hide admin nav */
+body.not-authenticated .nav-not-loggedin {
+  display: flex;
+}
+body.not-authenticated .nav-admin {
+  display: none;
+}
+
+/* When logged in: hide login nav, show admin nav */
+body.authenticated .nav-not-loggedin {
+  display: none;
+}
+body.authenticated .nav-admin {
+  display: flex;
+}
+
+/* Role-based visibility */
+body.not-authenticated .role-logged-in {
+  display: none;
+}
+body.authenticated .role-logged-out {
+  display: none;
+}
+.role-admin {
+  display: none;
+}
+body.is-admin .role-admin {
+  display: block;
+}
+/* NAVIGATION TAB */
+/* NOT LOG IN */
+
+.nav-not-loggedin {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(93, 95, 95);
+  justify-content: space-between;
+  display: none;
+  align-items: center;
+  padding-right: 20px;
+
+  /* ADMIN PAGE */
+}
+.nav-admin {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(93, 95, 95);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+nav h1 {
+  font-size: 20px;
+  font-family: tahoma;
+  padding-left: 30px;
+  color: white;
+  cursor: pointer;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: tahoma;
+}
+.note {
+  height: 50px;
+  width: 40%;
+  background-color: rgb(102, 190, 241);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 8px;
+}
+.button {
+  background-color: aqua;
+  font-family: tahoma;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pink {
+  color: rgb(255, 110, 134);
+}
+.note p {
+  margin-top: 10px;
+}
+main {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* REGISTER */
+
+form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input {
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+.actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+/* HOME */
+
+/* EMAIL */
+
+.email-txt {
+  padding: 20px;
+  width: 30%;
+  background-color: rgb(172, 250, 172);
+  border-radius: 8px;
+}
+/* LOGIN  */
+
+.inner-profile {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 35%;
+}
+
+.emp-left {
+  justify-content: space-between;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.addedit {
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+.adedemp {
+  padding: 10px;
+  border:  1px solid;
+  width: 25%;
+}
+.dep-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ACCOUNT PAGE */
+.acc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.acct-cont {
+  width: 25%;
+  padding: 10px;
+  border: 1px solid;
+  justify-content: center;
+}
+.input-dsgn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reqme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
